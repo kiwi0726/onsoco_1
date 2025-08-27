@@ -1,1 +1,276 @@
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온사회적협동조합 투자 유치 인포그래픽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #118AB2, #06D6A0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-[#073B4C]">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center py-12">
+            <h1 class="text-4xl md:text-6xl font-black gradient-text mb-4">온사회적협동조합</h1>
+            <p class="text-xl md:text-2xl font-bold text-[#073B4C]">함께 만드는 지속가능한 광명시, 사회적 가치에 투자하세요</p>
+            <p class="text-md text-gray-600 mt-2">설립: 2025년 | 위치: 광명시 오리로 362</p>
+        </header>
+
+        <main class="space-y-12 md:space-y-20">
+
+            <section id="challenge" class="text-center">
+                <h2 class="text-3xl font-bold mb-8">광명시가 마주한 사회적 과제</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">🏘️</div>
+                        <h3 class="text-xl font-bold text-[#FF6B6B] mb-2">사회적 고립 심화</h3>
+                        <p class="text-gray-600">고령화와 핵가족화로 인해 공동체 유대감이 약화되고 있으며, 특히 취약계층의 사회적 소외가 문제입니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">💼</div>
+                        <h3 class="text-xl font-bold text-[#FFD166] mb-2">지속가능한 일자리 부족</h3>
+                        <p class="text-gray-600">청년, 경력단절여성, 고령층을 위한 양질의 안정적인 일자리가 부족하여 지역 경제의 활력이 저하되고 있습니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">♻️</div>
+                        <h3 class="text-xl font-bold text-[#06D6A0] mb-2">윤리적 소비 수요 증가</h3>
+                        <p class="text-gray-600">사회적 가치를 중시하는 소비 트렌드가 확산되고 있지만, 이를 충족시킬 지역 기반의 제품과 서비스가 부족합니다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="solution">
+                <h2 class="text-3xl font-bold text-center mb-8">우리의 해결책: 상생의 비즈니스 모델</h2>
+                <div class="bg-white p-8 rounded-lg shadow-xl">
+                    <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-6">
+                        <div class="text-center w-full md:w-1/3">
+                            <div class="p-4 bg-[#118AB2] text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-3">
+                                <span class="text-4xl">🤝</span>
+                            </div>
+                            <h3 class="text-lg font-bold">사회적 일자리 창출</h3>
+                            <p class="text-sm text-gray-600">취약계층 맞춤형 직업 훈련 및 안정적 고용</p>
+                        </div>
+                        <div class="text-5xl text-[#118AB2] hidden md:block">→</div>
+                        <div class="text-5xl text-[#118AB2] md:hidden">↓</div>
+                        <div class="text-center w-full md:w-1/3">
+                            <div class="p-4 bg-[#06D6A0] text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-3">
+                                <span class="text-4xl">🏛️</span>
+                            </div>
+                            <h3 class="text-lg font-bold">커뮤니티 공간 운영</h3>
+                            <p class="text-sm text-gray-600">교육, 문화, 소통을 위한 열린 공간 제공</p>
+                        </div>
+                        <div class="text-5xl text-[#06D6A0] hidden md:block">→</div>
+                         <div class="text-5xl text-[#06D6A0] md:hidden">↓</div>
+                        <div class="text-center w-full md:w-1/3">
+                            <div class="p-4 bg-[#FFD166] text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-3">
+                                <span class="text-4xl">🛍️</span>
+                            </div>
+                            <h3 class="text-lg font-bold">친환경/지역 제품 유통</h3>
+                            <p class="text-sm text-gray-600">지역 경제 활성화 및 지속가능한 소비 문화 확산</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sdgs">
+                <h2 class="text-3xl font-bold text-center mb-8">UN 지속가능발전목표(SDGs)와 함께합니다</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-[#118AB2]">Goal 8</h3>
+                        <p class="font-semibold mb-2">양질의 일자리와 경제 성장</p>
+                        <p class="text-sm text-gray-600">취약계층 고용 및 직업 훈련을 통해 지역 경제 자립에 기여합니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-[#FF6B6B]">Goal 11</h3>
+                        <p class="font-semibold mb-2">지속가능한 도시와 공동체</p>
+                        <p class="text-sm text-gray-600">커뮤니티 공간을 통해 사회적 결속력을 강화하고 포용적인 도시를 만듭니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-[#FFD166]">Goal 12</h3>
+                        <p class="font-semibold mb-2">책임감 있는 소비와 생산</p>
+                        <p class="text-sm text-gray-600">친환경 및 지역 제품 유통으로 지속가능한 소비 문화를 확산합니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-[#06D6A0]">Goal 17</h3>
+                        <p class="font-semibold mb-2">목표를 위한 파트너십</p>
+                        <p class="text-sm text-gray-600">지역 사회 내 다양한 조직과 협력하여 사회적 시너지를 창출합니다.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <section id="financials">
+                    <div class="bg-white p-8 rounded-lg shadow-xl h-full">
+                        <h2 class="text-2xl font-bold text-center mb-6">성장 전망: 3개년 재무 계획</h2>
+                        <p class="text-center text-gray-600 mb-6">안정적인 수익 창출을 통해 사회적 가치를 지속적으로 확대해 나갈 것입니다.</p>
+                        <div class="chart-container">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="investment">
+                    <div class="bg-white p-8 rounded-lg shadow-xl h-full">
+                        <h2 class="text-2xl font-bold text-center mb-2">투자 제안: 1억원</h2>
+                        <p class="text-center text-gray-600 mb-6">초기 투자는 사회적 임팩트를 가속화하는 핵심 동력이 됩니다.</p>
+                        <div class="chart-container">
+                            <canvas id="investmentChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="text-center py-12 mt-12 border-t-2 border-[#118AB2]">
+            <h3 class="text-2xl font-bold mb-4">함께 변화를 만들어갈 당신을 기다립니다</h3>
+            <p class="text-gray-700 mb-6">온사회적협동조합의 비전에 공감하고 사회적 가치 확산에 동참해주세요.</p>
+            <a href="https://blog.naver.com/on_soco" target="_blank" class="bg-[#073B4C] text-white font-bold py-3 px-8 rounded-full hover:bg-[#118AB2] transition-colors duration-300">
+                공식 블로그 방문하기
+            </a>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label) => {
+            const maxLen = 16;
+            if (label.length <= maxLen) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > maxLen && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine);
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(revenueCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2025년 (계획)', '2026년 (예상)', '2027년 (예상)'],
+                datasets: [{
+                    label: '총 매출액 (백만원)',
+                    data: [100, 180, 250],
+                    backgroundColor: '#118AB2',
+                    borderColor: '#073B4C',
+                    borderWidth: 2
+                }, {
+                    label: '당기순이익 (백만원)',
+                    data: [3.5, 20, 35],
+                    backgroundColor: '#06D6A0',
+                    borderColor: '#073B4C',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '백만원';
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    },
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+
+        const investmentCtx = document.getElementById('investmentChart').getContext('2d');
+        const investmentChart = new Chart(investmentCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['시설 투자 (50%)', '초기 운영 자금 (30%)', '마케팅 및 홍보 (20%)'],
+                datasets: [{
+                    label: '자금 사용 계획',
+                    data: [50, 30, 20],
+                    backgroundColor: [
+                        '#FF6B6B',
+                        '#FFD166',
+                        '#06D6A0',
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    },
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
